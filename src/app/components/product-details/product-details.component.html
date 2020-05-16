@@ -1,0 +1,28 @@
+<!--================Single Product Area =================-->
+<div class="product_image_area">
+    <div class="container">
+        <div class="row s_product_inner">
+            <div class="col-lg-6">
+                <img class="img-fluid" src="{{product.imageThumbnailUrl}}" alt="">
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="s_product_text">
+                    <h3>{{product.name}}</h3>
+                    <h2>${{product.price}}</h2>
+                    <ul class="list">
+                        <!-- <li><a class="active" href="#"><span>Category</span> : Household</a></li> -->
+                        <li><a href="#"><span>Availibility</span> : In Stock</a></li>
+                    </ul>
+                        <li><a class="active" href="#"><span>Category</span> : Household</a></li>
+                    <p>{{product.longDescription}}</p>
+                    <div class="product_count">
+                        <label for="qty">Quantity:</label>
+                        <input type="text" name="qty" id="sst" size="2" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+                        <a class="button primary-btn" href="#">Add to Cart</a>               
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+<!-- ================End Single Product Area ================= -->

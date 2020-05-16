@@ -1,0 +1,73 @@
+<!-- ================ start banner area ================= -->
+<section class="blog-banner-area" id="category">
+    <div class="container h-100">
+        <div class="blog-banner">
+            <div class="text-center">
+                <h1>Shop Category</h1>
+                <nav aria-label="breadcrumb" class="banner-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Shop Category</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================ end banner area ================= -->
+
+<!-- ================ category section start ================= -->
+<section class="section-margin--small mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-5">
+                <div class="sidebar-categories">
+                    <div class="head">Browse Categories</div>
+                    <ul class="main-categories">
+                        <li class="common-filter">
+                            <form action="#">
+                                <ul>
+                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="men"
+                                            name="brand"><label for="men">Laptops<span> </span></label></li>
+                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="women"
+                                            name="brand"><label for="women"> Mobiles <span> </span></label></li>
+                                    <li class="filter-list"><input class="pixel-radio" type="radio" id="accessories"
+                                            name="brand"><label for="accessories"> Consoles <span>
+                                            </span></label></li>
+                                </ul>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-8 col-md-7">
+                <!-- Start Filter Bar -->
+                <div class="filter-bar d-flex flex-wrap align-items-center">
+                    <div class="sorting">
+                        
+                    </div>
+                    <div class="sorting mr-auto">
+                        
+                    </div>
+                    <div>
+                        <div class="input-group filter-bar-search">
+                            <input type="text" placeholder="Search">
+                            <div class="input-group-append">
+                                <button type="button"><i class="ti-search"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Filter Bar -->
+                <!-- Start Best Seller -->
+                <section class="lattest-product-area pb-40 category-list">
+                    <div class="row">
+                        <app-product-cart-item *ngFor="let prod of products" [prodInfo]="prod" class="col-md-6 col-lg-4"></app-product-cart-item>
+                    </div>
+                </section>
+                <!-- End Best Seller -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================ category section end ================= -->

@@ -1,0 +1,8 @@
+<tr *ngFor="let prod of orderInfo">
+    <td>  </td>
+    <td>{{ prod.productName }}</td>
+    <td>
+        {{ prod.amount }}
+    </td>
+    <td><span class="badge bg-danger">{{ prod.price * prod.amount }}</span></td>
+</tr>

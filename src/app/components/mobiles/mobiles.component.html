@@ -1,0 +1,40 @@
+<head>
+  <title>Aroma Shop - Mobiles</title>
+</head>
+
+	<!-- ================ start banner area ================= -->	
+	<section class="blog-banner-area" id="category">
+		<div class="container h-100">
+			<div class="blog-banner">
+				<div class="text-center">
+					<h1>Mobiles Category</h1>
+					<nav aria-label="breadcrumb" class="banner-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="'/home'">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Shop Mobiles</li>
+            </ol>
+          </nav>
+				</div>
+			</div>
+    </div>
+	</section>
+  <!-- ================ end banner area ================= -->
+  
+<section class="section-margin calc-60px">
+    <div class="container">
+      <div class="filter-bar d-flex flex-wrap align-items-center">
+        <div>
+          <div class="input-group filter-bar-search">
+            <input [(ngModel)]="name" type="text" placeholder="Search">
+            <div class="input-group-append">
+              <button type="button"><i class="ti-search" [routerLink]="['/product',name]" ></i></button>
+            </div>
+          </div>
+        </div>
+    </div>
+      <div class="row productContainer">
+        <app-product-item *ngFor="let product of products" [productInfo]='product'></app-product-item>
+        
+       </div>
+    </div>
+  </section>

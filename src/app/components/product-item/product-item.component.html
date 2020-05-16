@@ -1,0 +1,17 @@
+<div class="col-md col-lg col-xl ">
+    <div class="card text-center card-product">
+        <div class="card-product__img">
+            <img class="card-img" src="{{product.imageUrl}}" alt="">
+            <ul class="card-product__imgOverlay">
+                <li *ngIf="userLoginData"  (click)="onRemoveClick()"><button><i class="ti-trash"></i></button></li>
+                <li><button><i (click)="onCartClick()" class="ti-shopping-cart"></i></button></li>
+                <li *ngIf="userLoginData" (click)="onEditCartClick()"><button><i class="ti-settings"></i></button></li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <p>{{product.name}}</p>
+            <h4 class="card-product__title"><a [routerLink]="product.productId">{{product.shortDescription}}</a></h4>
+            <p class="card-product__price">${{product.price}}</p>
+        </div>
+    </div>
+</div>

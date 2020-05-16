@@ -1,0 +1,25 @@
+<section class="section-margin calc-60px">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            <div class="well well-sm">
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <img src="https://img.icons8.com/clouds/2x/user.png" alt="https://img.icons8.com/clouds/2x/user.png" class="img-rounded img-responsive image" />
+                    </div>
+                    <div class="col-sm-6 col-md-8 info">
+                        <h4>{{data.fName}} {{data.lName}}</h4>
+                        <br/>
+                        <p>{{data.gender}}</p>
+                        <p>{{data.brithDate}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      <div class="row ordersContainer">
+        <app-order-item *ngFor="let order of pendingOrders" [orderInfo]='order'></app-order-item>
+        <app-order-item *ngFor="let order of notPendingOrders" [orderInfo]='order'></app-order-item>
+       </div>
+    </div>
+  </section>

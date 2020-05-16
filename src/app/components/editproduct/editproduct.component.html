@@ -1,0 +1,43 @@
+<section class="checkout_area section-margin--small">
+    <div class="container">
+        
+        <div class="billing_details">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3>Product Details</h3>
+                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                        <div class="col-md-12 form-group p_star">
+                            <!-- [ngModelOptions]="{standalone: true}" -->
+                            <input [(ngModel)]="productRecieved.name" type="text" placeholder="Product Name" class="form-control" id="first" name="name"/>
+                            <span class="placeholder" data-placeholder="name"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input [(ngModel)]="productRecieved.shortDescription" type="text" placeholder="Short Description" class="form-control" id="last" name="ShortDescription"/>
+                            <span class="placeholder" data-placeholder="Short Description"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input [(ngModel)]="productRecieved.longDescription" type="text" class="form-control" placeholder="Long Description" id="number" name="LongDescription"/>
+                            <span class="placeholder" data-placeholder="Long Description"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input [(ngModel)]="productRecieved.price" type="number" class="form-control" placeholder="price" id="email" name="price"/>
+                            <span class="placeholder" data-placeholder="price"></span>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input [(ngModel)]="productRecieved.imageUrl" type="text" class="form-control" placeholder="Image URL" id="add1" name="ImageURL"/>
+                            <span class="placeholder" data-placeholder="Image URL"></span>
+                        </div>
+                        <div class="col-md-4 form-group"> 
+                            <span for="zip"> Discounted </span>
+                            <input [(ngModel)]="productRecieved.isDiscountedProduct" type="checkbox" class="checkbox-light" id="zip" name="IsDiscountedProduct"/>
+                        </div>
+                    </form>
+                    <div class="col-sm-4 m-auto text-center">
+                        <a class="button button-paypal" (click)="onSubmitOrderClick()">Submit Changes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Checkout Area =================-->

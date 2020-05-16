@@ -1,0 +1,94 @@
+<!-- ================ start banner area ================= -->	
+<section class="blog-banner-area" id="category">
+    <div class="container h-100">
+        <div class="blog-banner">
+            <div class="text-center">
+                <h1>Shopping Cart</h1>
+                <nav aria-label="breadcrumb" class="banner-breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Shopping Cart</li>
+        </ol>
+      </nav>
+            </div>
+        </div>
+</div>
+</section>
+<!-- ================ end banner area ================= -->
+
+<!--================Cart Area =================-->
+<section class="cart_area">
+    <div class="container">
+        <div class="cart_inner">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr app-cart-table-row (totalPriceOutputReduce)="totalPriceReduceparentMethod($event)"  (totalPriceOutput) = "totalPriceParentMethod($event)"
+                         *ngFor="let item of prodsCartItemsfromReq"  [prodinCart]="item">
+                            
+                        </tr>
+                        
+                        <!-- <tr class="bottom_button">
+                            <td>
+                                
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr> -->
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <h5>Total</h5>
+                            </td>
+                            <td>
+                                <h5 >${{total_Price}}</h5>
+                            </td>
+                        </tr>
+                        
+                        <tr class="out_button_area">
+                            <td class="d-none-l">
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+                                <div class="checkout_btn_inner d-flex align-items-center">
+                                    <a class="gray_btn" [routerLink]="'/products'">Continue Shopping</a>
+                                    <a class="primary-btn ml-2" [routerLink]="'/checkout'">Proceed to checkout</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!--================End Cart Area =================-->

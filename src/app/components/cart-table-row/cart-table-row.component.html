@@ -1,0 +1,23 @@
+<td>
+    <div class="media">
+        <div class="d-flex">
+            <img src="../../../assets/img/cart/cart2.png" alt=""> <!--{{item.product.imageUrl}}-->
+        </div>
+        <div class="media-body">
+            <p>{{ item.product.shortDescription }}</p>
+        </div>
+    </div>
+</td>
+<td>
+    <h5> ${{ item.product.price }}</h5>
+</td>
+<td>
+    <div class="product_count">
+        <input type="number" disabled maxlength="2" name="qty" id="sst" maxlength="12" [(ngModel)]="item.amount" title="Quantity:" class="input-text qty">
+        <button (click)="totalPriceMethod()" class="increase items-count" type="button"><i class="lnr lnr-chevron-up"></i></button>
+        <button (click)="totalPriceReduceMethod()" class="reduced items-count" type="button"><i class="lnr lnr-chevron-down"></i></button>
+    </div>
+</td>
+<td>
+    <h5>${{ item.amount*item.product.price }}</h5>
+</td>
